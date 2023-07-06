@@ -13,8 +13,13 @@ function countdown(){
         let minutes = Number(minutesDisplay.textContent)
         let seconds = Number(secondsDisplay.textContent)
 
+        if(minutes <= 0 && seconds <= 0){
+            updateDisplay(minutes , seconds)
+            return
+        }
+
         if(seconds <= 0){
-            seconds = 10
+            seconds = 2
 
             --minutes
         }
