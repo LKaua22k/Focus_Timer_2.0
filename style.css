@@ -23,25 +23,42 @@ body{
     font-size: 1.6rem;
 }
 
-.timer{
-  display: flex;
-  font-size: clamp(4rem,4rem + 10vw,12.6rem) ;
-}
 
 button svg path{
   fill: var(--text-color);
 }
 
 main{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:19.2rem ;
-  border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:19.2rem ;
+    border: 1px solid red;
+}
+
+
+#Timer_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    display: flex;
+    font-size: clamp(4rem,4rem + 10vw,12.6rem);
+    color: var(--text-color);
 }
 
 .controls{
-  display: flex;
+    display: flex;
+    gap: 4rem;
+}
+
+.control{  
+    background:transparent;
+    border:none;
+    width: 4.6rem;
 }
 
 #buttons_wrapper{
