@@ -5,11 +5,64 @@
 }
 
 :root{
-    --font: 'Roboto', sans-serif;
+    --bg-color:#FFFFFF;
+    --bg-button:#E1E1E6;
+    --text-color:#323238;
 
+
+    --font: 'Roboto', sans-serif;
     font-size: 62.5%;
 }
 
 body{
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    display: grid;
+    place-content: center;
+    height: 100vh;
     font-size: 1.6rem;
+}
+
+.timer{
+  display: flex;
+  font-size: clamp(4rem,4rem + 10vw,12.6rem) ;
+}
+
+button svg path{
+  fill: var(--text-color);
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:19.2rem ;
+  border: 1px solid red;
+}
+
+.controls{
+  display: flex;
+}
+
+#buttons_wrapper{
+  border: 1px solid;
+  display: grid;
+  grid-template-areas: "A B"
+  "C D";
+  grid-gap: 3.2rem;
+}
+
+.forest{
+  grid-area: A;
+}
+.rain{
+  grid-area: B;
+}
+
+.coffeshop{
+  grid-area: C;
+}
+
+.fireplace{
+  grid-area: D;
 }
