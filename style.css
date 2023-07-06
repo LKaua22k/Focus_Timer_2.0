@@ -23,6 +23,9 @@ body{
     font-size: 1.6rem;
 }
 
+button{
+  cursor: pointer;
+}
 
 button svg path{
   fill: var(--text-color);
@@ -30,10 +33,7 @@ button svg path{
 
 main{
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap:19.2rem ;
-    border: 1px solid red;
 }
 
 
@@ -47,6 +47,7 @@ main{
 .timer{
     display: flex;
     font-size: clamp(4rem,4rem + 10vw,12.6rem);
+    font-weight: 500;
     color: var(--text-color);
 }
 
@@ -58,15 +59,27 @@ main{
 .control{  
     background:transparent;
     border:none;
-    width: 4.6rem;
+}
+
+.control  svg{
+  width: clamp(3.2rem, 2rem + 2vw,4.8rem)
 }
 
 #buttons_wrapper{
-  border: 1px solid;
   display: grid;
   grid-template-areas: "A B"
   "C D";
   grid-gap: 3.2rem;
+}
+
+.card{
+  padding: 4.8rem 4rem 4.1rem;
+  border-radius: 2.4rem;
+  border: none;
+}
+
+.card svg{
+  width: 4.4rem;
 }
 
 .forest{
