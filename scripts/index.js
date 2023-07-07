@@ -35,12 +35,24 @@ function updateDisplay(minutes , seconds) {
 
 function moreMinutes(){
         let minutes = Number(minutesDisplay.textContent)
-        let seconds = Number(secondsDisplay.textContent)
-
         seconds = 0
 
         updateDisplay(String(minutes+ 5),seconds)
 
+
+}
+
+function lessMinutes(){
+        let minutes = Number(minutesDisplay.textContent)
+
+        if(minutes <=0 && seconds <= 0){
+            updateDisplay(minutes,seconds)
+            return
+        }
+
+        seconds = 0
+
+        updateDisplay(String(minutes - 5),seconds)
 
 }
 
@@ -55,10 +67,11 @@ stop.addEventListener('click', function(){
 })
 
 add.addEventListener('click', function(){
-    alert("add")
+    // alert("add")
     moreMinutes()
 })
 
 less.addEventListener('click', function(){
-    alert("less")
+    // alert("less")
+    lessMinutes()
 })
