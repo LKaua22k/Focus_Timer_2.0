@@ -4,7 +4,6 @@ const add = document.querySelector('.more')
 const less = document.querySelector('.less')
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
-let minutes = Number(minutesDisplay.textContent)
 let Timeout
 
 
@@ -19,7 +18,7 @@ function countdown(){
         }
 
         if(seconds <= 0){
-            seconds = 2
+            seconds = 6
 
             --minutes
         }
@@ -34,6 +33,17 @@ function updateDisplay(minutes , seconds) {
     secondsDisplay.textContent = String(seconds).padStart(2, '0')
 }
 
+function moreMinutes(){
+        let minutes = Number(minutesDisplay.textContent)
+        let seconds = Number(secondsDisplay.textContent)
+
+        seconds = 0
+
+        updateDisplay(String(minutes+ 5),seconds)
+
+
+}
+
 play.addEventListener('click', function(){
     alert("play")
     countdown()
@@ -46,6 +56,7 @@ stop.addEventListener('click', function(){
 
 add.addEventListener('click', function(){
     alert("add")
+    moreMinutes()
 })
 
 less.addEventListener('click', function(){
