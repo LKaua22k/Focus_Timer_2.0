@@ -13,6 +13,7 @@ function countdown(){
         let seconds = Number(secondsDisplay.textContent)
 
         if(minutes <= 0 && seconds <= 0){
+            minutes = prompt("novo")
             updateDisplay(minutes , seconds)
             return
         }
@@ -34,26 +35,24 @@ function updateDisplay(minutes , seconds) {
 }
 
 function moreMinutes(){
-        let minutes = Number(minutesDisplay.textContent)
+        let minutes = Number(minutesDisplay.textContent) + 5
         seconds = 0
 
-        updateDisplay(String(minutes+ 5),seconds)
+        if(minutes >= 100){
+            minutes = 100
+        }
 
-
+        updateDisplay(minutes, seconds)
 }
 
 function lessMinutes(){
-        let minutes = Number(minutesDisplay.textContent)
+        let minutes = Number(minutesDisplay.textContent) - 5
 
-        if(minutes <=0 && seconds <= 0){
-            updateDisplay(minutes,seconds)
-            return
-        }
+    if(minutes < 0){
+        minutes = 0
+    }
 
-        seconds = 0
-
-        updateDisplay(String(minutes - 5),seconds)
-
+    updateDisplay(minutes,0)
 }
 
 play.addEventListener('click', function(){
