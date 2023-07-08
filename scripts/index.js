@@ -37,7 +37,7 @@ function moreMinutes(){
         let minutes = Number(minutesDisplay.textContent)
         seconds = 0
 
-        updateDisplay(String(minutes + 5),seconds)
+        updateDisplay(String(minutes+ 5),seconds)
 
 
 }
