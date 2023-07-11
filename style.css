@@ -1,98 +1,106 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root{
-    --bg-color:#FFFFFF;
-    --bg-button:#E1E1E6;
-    --text-color:#323238;
+  --bg-color:#FFFFFF;
+  --bg-button:#E1E1E6;
+  --text-color:#323238;
 
 
-    --font: 'Roboto', sans-serif;
-    font-size: 62.5%;
+  --font: 'Roboto', sans-serif;
+  font-size: 62.5%;
 }
 
 body{
-    font-family: var(--font);
-    background-color: var(--bg-color);
-    display: grid;
-    place-content: center;
-    height: 100vh;
-    font-size: 1.6rem;
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-size: 1.6rem;
 }
 
 button{
-  cursor: pointer;
+cursor: pointer;
 }
 
 button svg path{
-  fill: var(--text-color);
+fill: var(--text-color);
 }
 
 main{
-    display: flex;
-    gap:19.2rem ;
+  display: flex;
+  gap:19.2rem ;
 }
 
 
 #Timer_wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .timer{
-    display: flex;
-    font-size: clamp(4rem,4rem + 10vw,12.6rem);
-    font-weight: 500;
-    color: var(--text-color);
+  display: flex;
+  font-size: clamp(4rem,4rem + 10vw,12.6rem);
+  font-weight: 500;
+  color: var(--text-color);
 }
 
 .controls{
-    display: flex;
-    gap: 4rem;
+  display: flex;
+  gap: 4rem;
 }
 
 .control{  
-    background:transparent;
-    border:none;
+  background:transparent;
+  border:none;
 }
 
 .control  svg{
-  width: clamp(3.2rem, 2rem + 2vw,4.8rem)
+width: clamp(3.2rem, 2rem + 2vw,4.8rem)
 }
 
 #buttons_wrapper{
-  display: grid;
-  grid-template-areas: "A B"
-  "C D";
-  grid-gap: 3.2rem;
+display: grid;
+grid-template-areas: "A B"
+"C D";
+grid-gap: 3.2rem;
 }
 
 .card{
-  padding: 4.8rem 4rem 4.1rem;
-  border-radius: 2.4rem;
-  border: none;
+width: 13.8rem;
+height: 15.2rem;
+border-radius: 2.4rem;
+border: none;
+background-color: var(--bg-button);
+transition: background-color 1s ;
+}
+
+.active svg path{
+  fill: var(--bg-color);
+  transition: background-color 1s ;
 }
 
 .card svg{
-  width: 4.4rem;
+width: 4.4rem;
 }
 
 .forest{
-  grid-area: A;
+grid-area: A;
 }
 .rain{
-  grid-area: B;
+grid-area: B;
 }
 
 .coffeshop{
-  grid-area: C;
+grid-area: C;
 }
 
 .fireplace{
-  grid-area: D;
+grid-area: D;
 }
