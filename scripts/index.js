@@ -13,10 +13,15 @@ const rain = document.querySelector('.rain')
 const coffe = document.querySelector('.coffeshop')
 const fire = document.querySelector('.fireplace')
 
+// Audio
+const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true");
+const timerEnd = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true");
+
+
+
 function remo(btn,color){
     btn.style.backgroundColor = color
 }
-
 
 function countdown(){
     Timeout = setTimeout(() => {
@@ -24,6 +29,7 @@ function countdown(){
         let seconds = Number(secondsDisplay.textContent)
 
         if(minutes <= 0 && seconds <= 0){
+            timerEnd.play()
             minutes = prompt("novo")
             updateDisplay(minutes , seconds)
             return
@@ -66,23 +72,26 @@ function lessMinutes(){
 }
 
 play.addEventListener('click', function(){
-    alert("play")
-    countdown()
+        countdown()
+        buttonPressAudio.play()
 })
 
 stop.addEventListener('click', function(){
     alert("Stop")
     clearInterval(Timeout)
+    buttonPressAudio.play()
 })
 
 add.addEventListener('click', function(){
     // alert("add")
     moreMinutes()
+    buttonPressAudio.play()
 })
 
 less.addEventListener('click', function(){
     // alert("less")
     lessMinutes()
+    buttonPressAudio.play()
 })
 
 forest.addEventListener('click', () =>{
