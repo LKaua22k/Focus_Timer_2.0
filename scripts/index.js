@@ -82,6 +82,14 @@ stop.addEventListener('click', function(){
     alert("Stop")
     clearInterval(Timeout)
     buttonPressAudio.play()
+    rain.style.backgroundColor = '#E1E1E6'
+    forest.style.backgroundColor = '#E1E1E6'
+    coffe.style.backgroundColor = '#E1E1E6'
+    fire.style.backgroundColor = '#E1E1E6'
+    rainSong.pause()
+    forestSong.pause()
+    coffeSong.pause()
+    fireSong.pause()
 })
 
 add.addEventListener('click', function(){
@@ -133,6 +141,10 @@ coffe.addEventListener('click', () =>{
     coffe.classList.add('active')
     fire.classList.remove('active')
     remo(coffe,'#9D3A02')
+    coffeSong.play()
+    rainSong.pause()
+    forestSong.pause()
+    fireSong.pause()
     forest.style.backgroundColor = '#E1E1E6'
     rain.style.backgroundColor = '#E1E1E6'
     fire.style.backgroundColor = '#E1E1E6'
@@ -144,6 +156,10 @@ fire.addEventListener('click', () =>{
     coffe.classList.remove('active')
     fire.classList.add('active')
     remo(fire,'#9D0B02')
+    fireSong.play()
+    rainSong.pause()
+    forestSong.pause()
+    coffeSong.pause()
     rain.style.backgroundColor = '#E1E1E6'
     coffe.style.backgroundColor = '#E1E1E6'
     forest.style.backgroundColor = '#E1E1E6'
