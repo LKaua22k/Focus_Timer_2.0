@@ -16,7 +16,7 @@ const fire = document.querySelector('.fireplace')
 // Audio
 const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true");
 const timerEnd = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true");
-
+const forestSong = new Audio("https://drive.google.com/file/d/1CRHkV72WUMdcqec5GT_KdsqFz0z3VAOA/view");
 
 
 function remo(btn,color){
@@ -100,6 +100,7 @@ forest.addEventListener('click', () =>{
     coffe.classList.remove('active')
     fire.classList.remove('active')
     remo(forest, '#029D53')
+    forestSong.play(    )
     rain.style.backgroundColor = '#E1E1E6'
     coffe.style.backgroundColor = '#E1E1E6'
     fire.style.backgroundColor = '#E1E1E6'
