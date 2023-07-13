@@ -38,7 +38,7 @@ function countdown(){
         }
 
         if(seconds <= 0){
-            seconds = 6
+            seconds = 60
 
             --minutes
         }
@@ -79,7 +79,6 @@ play.addEventListener('click', function(){
 })
 
 stop.addEventListener('click', function(){
-    alert("Stop")
     clearInterval(Timeout)
     buttonPressAudio.play()
     rain.style.backgroundColor = '#E1E1E6'
@@ -93,13 +92,11 @@ stop.addEventListener('click', function(){
 })
 
 add.addEventListener('click', function(){
-    // alert("add")
     moreMinutes()
     buttonPressAudio.play()
 })
 
 less.addEventListener('click', function(){
-    // alert("less")
     lessMinutes()
     buttonPressAudio.play()
 })
