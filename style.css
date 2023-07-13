@@ -73,7 +73,7 @@ grid-gap: 2rem;
 }
 
 .card{
-width: clamp(9.2rem, 10rem + 2vw,13.8rem);
+width: clamp(9.2rem, 9.2rem + 2vw,13.8rem);
 height: clamp(9.2rem,12rem + 2vw,15.2rem);
 border-radius: 2.4rem;
 border: none;
@@ -83,11 +83,11 @@ transition: background-color 1s ;
 
 .active svg path{
   fill: var(--bg-color);
-  transition: background-color 1s ;
+  transition  : background-color 1s ;
 }
 
 .card svg{
-  width: clamp(3.2rem, 2rem + 2vw,4.4rem);
+  width: clamp(1.2rem, 1rem + 5vw,4.8rem)
 }
 
 .forest{
