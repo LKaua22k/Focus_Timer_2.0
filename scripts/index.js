@@ -21,6 +21,8 @@ const rainSong = new Audio('./audio/Chuva.wav');
 const coffeSong = new Audio('./audio/Cafeteria.wav');
 const fireSong = new Audio('./audio/Lareira.wav');
 
+buttonPressAudio,timerEnd,forestSong,rainSong,coffeSong,fireSong.loop = true
+
 function remo(btn,color){
     btn.style.backgroundColor = color
 }
